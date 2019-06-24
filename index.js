@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
 const rotas = require('./rotas')
 app.use('/api', rotas)
 
+//conectando node ao react
+app.use(express.static(__dirname + '/client'))
+
 const port = 3001
 
 app.listen(port, () => {
